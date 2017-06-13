@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context="cn.hlq.androidrightsmanagement.MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="本示例主要去解决Android 6.0关于权限方面，对比市面上相关解决办法，整合一下，方便大家使用~"/>
+
+    <Button
+        android:id="@+id/btn_hongchen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="红橙Darren 权限管理"/>
+</LinearLayout>
