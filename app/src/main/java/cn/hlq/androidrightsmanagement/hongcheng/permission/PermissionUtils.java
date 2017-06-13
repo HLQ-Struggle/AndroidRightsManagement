@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by HLQ on 2017/6/13 处理权限请求工具类
+ * Created by HLQ on 2017/6/13  处理权限请求工具类
  */
 public class PermissionUtils {
 

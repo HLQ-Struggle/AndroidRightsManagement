@@ -6,7 +6,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by HLQ on 2017/6/13 0013.
+ * Created by HLQ on 2017/6/13
  */
 @Target(ElementType.METHOD) // 放在什么位置 METHOD 放在方法上 FIELD 放在属性上 TYPE 放在类上
 @Retention(RetentionPolicy.RUNTIME) // 编译时检测 or 运行时检测

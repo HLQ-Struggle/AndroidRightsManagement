@@ -8,6 +8,9 @@ import android.view.View;
 import cn.hlq.androidrightsmanagement.hongcheng.HongChengActivity1;
 import cn.hlq.androidrightsmanagement.hongcheng.HongChengActivity2;
 
+/**
+ *  create by heliquan at 2017年6月13日
+ */
 public class MainActivity extends Activity {
 
     @Override

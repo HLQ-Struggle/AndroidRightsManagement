@@ -7,7 +7,7 @@ import android.support.v4.app.ActivityCompat;
 import java.util.List;
 
 /**
- * Created by HLQ on 2017/6/13 权限管理工具类
+ * Created by HLQ on 2017/6/13 权限管理工具类(关键)
  */
 public class PermissionHelper {
 

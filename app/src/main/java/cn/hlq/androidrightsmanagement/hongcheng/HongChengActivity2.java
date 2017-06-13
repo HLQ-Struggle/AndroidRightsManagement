@@ -15,7 +15,7 @@ import cn.hlq.androidrightsmanagement.hongcheng.permission.PermissionHelper;
 import cn.hlq.androidrightsmanagement.hongcheng.permission.PermissionSucceed;
 
 /**
- * 权限管理简单处理
+ * 权限管理简单处理 create by heliquan at 2017年6月13日
  */
 public class HongChengActivity2 extends Activity {
 
