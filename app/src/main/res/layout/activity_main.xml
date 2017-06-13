@@ -17,5 +17,11 @@
         android:id="@+id/btn_hongchen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="红橙Darren 权限基本处理"/>
+
+    <Button
+        android:id="@+id/btn_hongchen_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="红橙Darren 权限管理"/>
 </LinearLayout>
