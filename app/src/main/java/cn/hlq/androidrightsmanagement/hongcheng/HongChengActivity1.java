@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -52,6 +53,7 @@ public class HongChengActivity1 extends Activity {
     @Override
     public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        Log.e("HLQ_Struggle", "请求码：" + requestCode);
         if (requestCode == CALL_PHONE_REQUEST_CODE) {
             if (grantResults != null && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 // Permission Granted

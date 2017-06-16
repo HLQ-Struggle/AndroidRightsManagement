@@ -41,7 +41,7 @@ public class PermissionUtils {
         Method[] methods = reflectObject.getClass().getDeclaredMethods();
         // 遍历找到设置Tag的方法
         for (Method method : methods) {
-            Log.e("HLQ_Struggle", "找到的方法：" + method + "");
+//            Log.e("HLQ_Struggle", "找到的方法：" + method + "");
             // 获取该方法上面有没有设置成功的Tag
             PermissionSucceed succeedMethod = method.getAnnotation(PermissionSucceed.class);
             if (succeedMethod != null) {
@@ -51,6 +51,33 @@ public class PermissionUtils {
                 if (methodCode == requestCode) {
                     // 找到方法 通过反射执行该方法
                     Log.e("HLQ_Struggle", "找到了该方法：" + method);
+                    executeMethod(reflectObject, method);
+                }
+            }
+        }
+    }
+
+    /**
+     * 执行失败
+     *
+     * @param object
+     * @param requestCode
+     */
+    public static void executeFailMethod(Object reflectObject, int requestCode) {
+        // 获取class中所有方法去
+        Method[] methods = reflectObject.getClass().getDeclaredMethods();
+        // 遍历找到设置Tag的方法
+        for (Method method : methods) {
+            Log.e("HLQ_Struggle", method + "");
+            // 获取该方法上面有没有设置失败的Tag
+            PermissionFail faildMethod = method.getAnnotation(PermissionFail.class);
+            if (faildMethod != null) {
+                // 代表该方法设置Tag
+                // 判断请求码是否一致
+                int methodCode = faildMethod.requestCode();
+                if (methodCode == requestCode) {
+                    // 找到方法 通过反射执行该方法
+                    Log.e("HLQ_Struggle", "找到了失败的方法：" + method);
                     executeMethod(reflectObject, method);
                 }
             }
@@ -83,11 +110,11 @@ public class PermissionUtils {
      * @param mRequestPermission
      * @return
      */
-    public static List<String> getDeniedPermissions(Object mObject, String[] mRequestPermission) {
+    public static List<String> getDeniedPermissions(Object object, String[] requestPermissions) {
         List<String> deniedPermissions = new ArrayList<>();
-        for (String requestPermission : mRequestPermission) {
+        for (String requestPermission : requestPermissions) {
             // 将用户拒绝的权限添加集合
-            if (ContextCompat.checkSelfPermission(getActivity(mObject), requestPermission) == PackageManager.PERMISSION_DENIED) {
+            if (ContextCompat.checkSelfPermission(getActivity(object), requestPermission) == PackageManager.PERMISSION_DENIED) {
                 deniedPermissions.add(requestPermission);
             }
         }
@@ -110,30 +137,4 @@ public class PermissionUtils {
         return null;
     }
 
-    /**
-     * 执行失败
-     *
-     * @param object
-     * @param requestCode
-     */
-    public static void executeFailMethod(Object reflectObject, int requestCode) {
-        // 获取class中所有方法去
-        Method[] methods = reflectObject.getClass().getDeclaredMethods();
-        // 遍历找到设置Tag的方法
-        for (Method method : methods) {
-            Log.e("HLQ_Struggle", method + "");
-            // 获取该方法上面有没有设置失败的Tag
-            PermissionFail faildMethod = method.getAnnotation(PermissionFail.class);
-            if (faildMethod != null) {
-                // 代表该方法设置Tag
-                // 判断请求码是否一致
-                int methodCode = faildMethod.requestCode();
-                if (methodCode == requestCode) {
-                    // 找到方法 通过反射执行该方法
-                    Log.e("HLQ_Struggle", "找到了失败的方法：" + method);
-                    executeMethod(reflectObject, method);
-                }
-            }
-        }
-    }
 }

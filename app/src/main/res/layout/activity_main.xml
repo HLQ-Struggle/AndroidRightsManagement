@@ -24,4 +24,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="红橙Darren 权限管理"/>
+
+    <Button
+        android:id="@+id/btn_rx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RxPermissions 权限管理"/>
+
 </LinearLayout>

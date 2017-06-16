@@ -7,9 +7,10 @@ import android.view.View;
 
 import cn.hlq.androidrightsmanagement.hongcheng.HongChengActivity1;
 import cn.hlq.androidrightsmanagement.hongcheng.HongChengActivity2;
+import cn.hlq.androidrightsmanagement.rxpermissions.RxPermissionsActivity;
 
 /**
- *  create by heliquan at 2017年6月13日
+ * create by heliquan at 2017年6月13日
  */
 public class MainActivity extends Activity {
 
@@ -28,6 +29,13 @@ public class MainActivity extends Activity {
 
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, HongChengActivity2.class));
+            }
+        });
+        findViewById(R.id.btn_rx).setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, RxPermissionsActivity.class));
             }
         });
     }

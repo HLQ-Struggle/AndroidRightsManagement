@@ -5,18 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="15dp"
     tools:context="cn.hlq.androidrightsmanagement.hongcheng.HongChengActivity1">
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="phoneClick"
-        android:text="拨打电话"/>
+        android:text="第一个例子-拨打电话"/>
 
     <Button
         android:id="@+id/id_call"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="拨电话-114"/>
+        android:text="权限管理封装框架-拨电话-114"/>
 
 </LinearLayout>

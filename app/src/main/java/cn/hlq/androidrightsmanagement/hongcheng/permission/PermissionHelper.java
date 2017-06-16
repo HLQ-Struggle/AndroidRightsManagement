@@ -94,7 +94,7 @@ public class PermissionHelper {
             return;
         }
         // 大于等于6.0 判断权限是否授予
-        // 获取用户拒绝的权限
+        // 获取用户拒绝的权限 检测权限
         List<String> deniedPermissions = PermissionUtils.getDeniedPermissions(mObject, mRequestPermission);
         // 权限被授予 反射获取执行方法
         if (deniedPermissions.size() == 0) {
@@ -116,7 +116,6 @@ public class PermissionHelper {
     public static void requestPermissionsResult(Object object, int requestCode, String[] permissions) {
         // 再次获取用户拒绝的权限
         List<String> deniedPermissions = PermissionUtils.getDeniedPermissions(object, permissions);
-
         if (deniedPermissions.size() == 0) {
             // 用户已授权申请的权限
             PermissionUtils.executeSucceedMethod(object, requestCode);

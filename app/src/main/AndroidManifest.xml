@@ -21,6 +21,8 @@
         </activity>
         <activity android:name=".hongcheng.HongChengActivity1"/>
         <activity android:name=".hongcheng.HongChengActivity2"/>
+        <activity android:name=".rxpermissions.RxPermissionsActivity">
+        </activity>
     </application>
 
 </manifest>

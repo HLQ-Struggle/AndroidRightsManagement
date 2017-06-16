@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -19,7 +20,7 @@ import cn.hlq.androidrightsmanagement.hongcheng.permission.PermissionSucceed;
  */
 public class HongChengActivity2 extends Activity {
 
-    private static final int CALL_PHONR_REQUEST_CODE = 0 * 0011;
+    private static final int CALL_PHONR_REQUEST_CODE = 0x0011;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +53,8 @@ public class HongChengActivity2 extends Activity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        Log.e("HLQ_Struggle", "=====================>CALL_PHONR_REQUEST_CODE：" + CALL_PHONR_REQUEST_CODE);
+        Log.e("HLQ_Struggle", "=====================>请求码：" + requestCode);
         PermissionHelper.requestPermissionsResult(this, requestCode, permissions);
     }
 }
