@@ -7,6 +7,7 @@ import android.view.View;
 
 import cn.hlq.androidrightsmanagement.hongcheng.HongChengActivity1;
 import cn.hlq.androidrightsmanagement.hongcheng.HongChengActivity2;
+import cn.hlq.androidrightsmanagement.permissionsdispatcher.DispatcherActivity;
 import cn.hlq.androidrightsmanagement.rxpermissions.RxPermissionsActivity;
 
 /**
@@ -36,6 +37,13 @@ public class MainActivity extends Activity {
 
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, RxPermissionsActivity.class));
+            }
+        });
+        findViewById(R.id.btn_p).setOnClickListener(new View.OnClickListener() {
+            @Override
+
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, DispatcherActivity.class));
             }
         });
     }

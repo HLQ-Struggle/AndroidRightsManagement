@@ -31,4 +31,9 @@
         android:layout_height="wrap_content"
         android:text="RxPermissions 权限管理"/>
 
+    <Button
+        android:id="@+id/btn_p"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="permissionsdispatcher简单使用"/>
 </LinearLayout>
